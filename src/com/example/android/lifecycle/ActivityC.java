@@ -22,6 +22,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
+import com.example.android.lifecycle.util.ActivityFinisher;
 import com.example.android.lifecycle.util.StatusTracker;
 import com.example.android.lifecycle.util.Utils;
 
@@ -86,11 +87,6 @@ public class ActivityC extends Activity {
         mStatusTracker.setStatus(mActivityName, getString(R.string.on_destroy));
     }
 
-    public void startDialog(View v) {
-        Intent intent = new Intent(ActivityC.this, DialogActivity.class);
-        startActivity(intent);
-    }
-
     public void startActivityA(View v) {
         Intent intent = new Intent(ActivityC.this, ActivityA.class);
         startActivity(intent);
@@ -102,6 +98,9 @@ public class ActivityC extends Activity {
     }
 
     public void finishActivityC(View v) {
-        ActivityC.this.finish();
+    	ActivityFinisher AF = new ActivityFinisher(ActivityC.this, mActivityName);
+    	AF.finish();
     }
+    
+
 }

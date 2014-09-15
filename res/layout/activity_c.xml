@@ -32,7 +32,7 @@ limitations under the License.
     />
 
 
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
         android:orientation="vertical"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -62,15 +62,6 @@ limitations under the License.
         android:text="@string/btn_finish_c_label"
         android:layout_toRightOf="@id/btn_start_b"
         android:onClick="finishActivityC"
-        />
-
-    <Button
-        android:id="@+id/btn_start_dialog"
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        android:text="@string/btn_start_dialog_label"
-        android:layout_toRightOf="@id/btn_finish_c"
-        android:onClick="startDialog"
         />
 
 </RelativeLayout>
